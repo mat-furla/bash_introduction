@@ -1,0 +1,20 @@
+{
+  "name": "slidev",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "cli": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.40.3",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "slidev-theme-eloc": "^1.0.1"
+  },
+  "devDependencies": {
+    "@iconify-json/emojione": "^1.1.6",
+    "@iconify-json/logos": "^1.1.23"
+  }
+}
