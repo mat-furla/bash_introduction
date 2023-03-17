@@ -24,9 +24,9 @@ echo "Hello World"
 ### Permissões
 
 |                | Owner | Group | Others |
-|----------------|-------|-------|--------|
-| Read( r )      | 4     |       |        |
-| Write( w )     | 2     | 2     | 2      |
+| -------------- | ----- | ----- | ------ |
+| Read( r )      | 4     | 4     | 4      |
+| Write( w )     | 2     |       |        |
 | Execution( x ) | 1     | 1     | 1      |
 | **Total**      | **7** | **5** | **5**  |
 
@@ -35,7 +35,7 @@ echo "Hello World"
 ### Permissões
 
 |                | Owner | Group | Others |
-|----------------|-------|-------|--------|
+| -------------- | ----- | ----- | ------ |
 | Read( r )      | 4     | 4     | 4      |
 | Write( w )     | 2     |       |        |
 | Execution( x ) |       |       |        |
@@ -57,6 +57,16 @@ echo "O nome da imagem é: $image_name"
 ```
 
 `O nome da imagem é: openbankingdevops/hello-world`
+
+---
+
+<v-clicks>
+
+ - Podem conter números, um caracter ou uma string de caracteres
+ - São case-sensitive
+ - O caracter `\` pode ser usado para dar escape em caracteres especiais
+
+</v-clicks>
 
 ---
 
@@ -149,6 +159,109 @@ echo "O nome da imagem é: ${image_name}"
 ---
 
 ### Variáveis de Ambiente
+
+---
+
+<v-clicks>
+
+ - Forma simples de passar informação entre o ambiente e o programa sendo executado
+ - Array de strings no formato de `chave=valor`
+ - Exemplos: `$PATH` e `$HOME`
+
+</v-clicks>
+
+---
+
+<v-clicks>
+
+ - Podem ser configuradas em runtime através de `declare -x` ou `export`  
+ - Edição do arquivo `.bashrc`
+ - `TZ=UTC date`
+
+</v-clicks>
+
+---
+
+`export` 
+
+<v-clicks>
+
+ - Listar: `export [-p]`
+ - Adicionar: `export CHAVE=VALOR`
+ - Remover: `export -n CHAVE`
+
+</v-clicks>
+
+---
+
+`declare`
+
+<v-clicks>
+
+ - Listar: `declare [-p]`
+ - Adicionar: `declare -x CHAVE=VALOR`
+ - Remover: `declare +x CHAVE`
+
+</v-clicks>
+
+---
+
+<v-clicks>
+
+ - `set`: listar ou exportar variáveis
+ - `unset`: remover variável
+ - `printenv`: listar variáveis
+
+</v-clicks>
+
+---
+
+### Argumentos
+
+---
+
+<v-clicks>
+
+ - Argumentos podem ser passados para o script através de uma lista delimitada por espaços
+ - `$1` = primeiro argumento, `$2` referencia o segundo e assim por diante
+ - `$0` = nome do script
+ - `$#` = número de argumentos
+ - `$@` = lista de argumentos
+
+</v-clicks>
+ 
+---
+
+```shell {all|4|5|7|9|10|11|12}
+#!/bin/bash
+# Description: example using arguments
+
+echo "Nome do arquivo = $0"
+echo "Terceiro argumento = $3"
+
+argument=$5
+
+echo "Quinto argumento = $argument"
+echo "Sexto argumento = $6"
+echo "Número de argumentos = $#"
+echo "Lista de argumentos = $@"
+```
+
+`arguments.sh primeiro segundo terceiro quarto quinto sexto`
+
+---
+
+```text
+Nome do arquivo = /home/matheus/Dev/scripts/arguments.sh
+Terceiro argumento = terceiro
+Sexto argumento = sexto
+Número de argumentos = 6
+Lista de argumentos = primeiro segundo terceiro quarto quinto sexto
+```
+
+---
+
+### Arrays
 
 ---
 
