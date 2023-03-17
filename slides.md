@@ -17,5 +17,21 @@ src: ./pages/basic_sintax.md
 ---
 
 ---
-src: ./pages/flux_control.md
+src: ./pages/env_variables.md
+---
+
+---
+src: ./pages/arguments.md
+---
+
+---
+src: ./pages/arrays.md
+---
+
+---
+src: ./pages/math_operators.md
+---
+
+---
+src: ./pages/string_operations.md
 ---
