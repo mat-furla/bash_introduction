@@ -35,3 +35,19 @@ src: ./pages/math_operators.md
 ---
 src: ./pages/string_operations.md
 ---
+
+---
+src: ./pages/conditional_structures.md
+---
+
+---
+src: ./pages/repeating_structures.md
+---
+
+---
+src: ./pages/functions.md
+---
+
+---
+src: ./pages/main_utilities.md
+---
