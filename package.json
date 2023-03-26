@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@iconify-json/emojione": "^1.1.6",
-    "@iconify-json/logos": "^1.1.23"
+    "@iconify-json/logos": "^1.1.23",
+    "playwright-chromium": "^1.32.1"
   }
 }

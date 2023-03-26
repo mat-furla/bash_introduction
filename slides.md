@@ -47,7 +47,3 @@ src: ./pages/repeating_structures.md
 ---
 src: ./pages/functions.md
 ---
-
----
-src: ./pages/main_utilities.md
----
